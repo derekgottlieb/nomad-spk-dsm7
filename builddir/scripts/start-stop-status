@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# TODO
+
+#!/bin/sh
+
+case $1 in
+  start)
+    exit 0
+  ;;
+  stop)
+    exit 0
+  ;;
+  status)
+    exit 0
+  ;;
+  log)
+    echo "Nomad is installed properly (some assembly required)"
+    exit 0
+  ;;
+esac

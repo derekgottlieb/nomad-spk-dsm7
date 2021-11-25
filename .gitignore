@@ -1,0 +1,5 @@
+*.spk
+*.zip
+
+builddir/INFO
+builddir/package/bin/nomad
