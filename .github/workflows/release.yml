@@ -1,0 +1,23 @@
+name: release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build
+        run: ./build.sh
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: nomad_*.spk
+          prerelease: true
+          fail_on_unmatched_files: true
