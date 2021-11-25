@@ -1,5 +1,9 @@
 *.spk
 *.zip
 
+/amd64
+/arm
+/arm64
+
 builddir/INFO
 builddir/package/bin/nomad
