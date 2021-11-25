@@ -4,9 +4,14 @@ Build Synology DSM7-compatible SPK install package for Hashicorp's Nomad
 
 ## Usage
 
-To download the nomad release binary and build the Synology SPK:
+To download the nomad release binary and build the Synology SPK for amd64, arm, and arm64:
 ```
 ./build.sh
+```
+
+To only download and build the Synology SPK for a single architecture:
+```
+./build.sh amd64
 ```
 
 The `config.sh` file contains configuration vars that define things like the

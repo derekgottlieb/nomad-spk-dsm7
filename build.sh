@@ -4,12 +4,14 @@ set -e
 
 source config.sh
 
-for arch in amd64 arm arm64
+ARCHES=${1:-"amd64 arm arm64"}
+
+for arch in $ARCHES
 do
   if [[ ! -f nomad_${NOMAD_VERSION}_linux_${arch}.zip ]]; then
     echo "Downloading nomad ${NOMAD_VERSION} / arch ${arch}"
     wget https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_linux_${arch}.zip
-    unzip -d ${arch} nomad_${NOMAD_VERSION}_linux_${arch}.zip
+    unzip -o -d ${arch} nomad_${NOMAD_VERSION}_linux_${arch}.zip
     mv ${arch}/nomad builddir/package/bin/
   fi
 
