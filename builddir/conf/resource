@@ -1,5 +1,1 @@
-{
-  "usr-local-linker": {
-    "bin": ["package/bin/nomad"]
-  }
-}
+{"systemd-unit":{},"usr-local-linker":{"bin":["bin/nomad"]}}
